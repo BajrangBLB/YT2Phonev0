@@ -1,0 +1,52 @@
+{% extends 'base_2.html' %}
+
+{% block head %}
+<style>
+        .footer {
+          position: fixed;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 50px;
+          padding: 5px;
+          background-color: black;
+          color: white;
+          margin-left:0;
+          margin-right:0;
+          margin-bottom:0;
+          margin-top:70px;
+        }
+
+    </style>
+{% endblock head %}
+{% block title %}
+    Contact Us |
+{% endblock title %}
+{% block body %}
+
+
+
+<div style="padding:40px">
+<form class='contact-form-blogger' method="post" action="contact_us">
+  {% csrf_token %}
+  <div class='contact-form-wrap row'>
+    <div class='col-md-6 mb-3'>
+      <label class='form-label fs-7 fw-bold' for='field-name'>Your Name</label>
+      <input class='form-control bg-transparent jt-border-light text-reset' id='field-name' name='name' required='' type='text' placeholder='Enter Name'/>
+    </div>
+    <div class='col-md-6 mb-3'>
+      <label class='form-label fs-7 fw-bold' for='field-email'>Email Address</label>
+      <input class='form-control bg-transparent jt-border-light text-reset' id='field-email' name='email' required='' type='email' placeholder='Enter Email'/>
+    </div>
+    <div class='col-12 mb-3'>
+      <label class='form-label fs-7 fw-bold' for='field-message'>Message</label>
+      <textarea class='form-control bg-transparent jt-border-light text-reset' id='field-message' name='message' required='' rows='3' placeholder='Enter Message'></textarea>
+    </div>
+    <div class='col-12 mb-3'>
+      <button class='btn btn-sm fw-bold py-2 px-5 jt-btn-primary' type='submit'>SEND</button>
+    </div>
+  </div>
+
+</form>
+</div>
+{% endblock body %}

@@ -1,0 +1,136 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    {% block head %}{% endblock head %}
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+
+    <link rel="icon" href="static/icon.png" type="image/png">
+
+    <title>{% block title %}{% endblock title %}Free Youtube Video Downloader</title>
+
+    <style>
+        .footer {
+          position: relative;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 50px;
+          padding: 5px;
+          background-color: black;
+          color: white;
+          margin-left:0;
+          margin-right:0;
+          margin-bottom:0;
+          margin-top:50px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">YT2Phone</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                <li class="nav-item">
+                    <a class="nav-link active" href="download_video">YouTube to mp4</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="download_audio">YouTube to mp3</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="/privacy_policy">Privacy Policy</a>
+                </li>
+
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="contact_us">Contact Us</a>
+                </li>
+            </ul>
+
+        </div>
+    </div>
+</nav>
+{% for message in messages %}
+<div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+    <strong>Message: </strong> {{ message }}.
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+{% block body %}{% endblock body %}
+
+<div style="margin-left:20px; margin-top:50px; margin-right:20px">
+    <div style="padding:10px; justify-content: center; width:100%;">
+        <h1 style="color:black; font-size:25px; width:100%; text-align:center">Free YouTube Downloader</h1>
+        <p style="color:gray; font-size:15px; width:100%; text-align:center">
+            Download YouTube Videos in audio and video format.<br>
+            Just paste the youtube video link below and hit the
+            download button, It's absolutely free, fast, and easy.
+        </p>
+
+    </div>
+
+    <form action='download_mp4'>
+        <input name='link' class="form-control me-2" type="text" placeholder="Enter YouTube Link Here"
+               aria-label="Enter YouTube Link Here">
+        <br>
+        <div style="padding:10px; text-align:center">
+            {% block btn_download %}{% endblock btn_download %}
+        </div>
+    </form>
+
+
+</div>
+
+<p style="color:gray; font-size:15px; width:100%; text-align:center"><span>YT2Phone</span> is an
+    online tool
+    that can download youtube videos online. Youtube video downloader allows you to save videos locally to
+    your device (iPhone, Android, iPad, tablet). </p>
+<div class="tool-description container mt-5 pt-5" style="margin-top:10px">
+
+    <h2>How to download youtube video?</h2>
+    <h3>Step 1:</h3>
+    <p>Go to youtube and open video that you want to download</p>
+    <h3>Step 2:</h3>
+    <p><span>=&gt; For Youtube Mobile App:</span> Go to an
+        individual video click on the share button showing below the video. After that click on 'Share' and then
+        you'll see a popup in which you will see a lot of options from which choose copy link option </p>
+
+    <p><span>=&gt; For Youtube Desktop Website:</span> Go to an
+        individual video and just copy the URL of the video. Or you can also
+        get a URL by clicking on the share button. </p>
+    <h3>Step 3:</h3>
+    <p>Paste the URL you just copied, in the above input text box, and click on the
+        download button, after that you will see a table containing information about that video. From that
+        table, you can select the quality of a video in which you want to download that. </p>
+    <p class="note mt-4"><span>Note:</span> Downloading of
+        copyright content such as official music videos, official movies, and promos are not allowed. </p>
+</div>
+
+<footer class="footer">
+
+    <p>
+        <span style="display:block; text-align:center; margin:10px;">Copyright © 2022 YT2Phone.com</span></p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+
+
+</body>
+</html>
