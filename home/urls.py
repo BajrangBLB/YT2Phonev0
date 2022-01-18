@@ -15,5 +15,6 @@ urlpatterns = [
     path('test_mp3', views.test_mp3, name="test_mp3"),
     path('test_360', views.test_360, name="test_360"),
     path('test_720', views.test_720, name="test_720"),
+    path('test_480', views.test_480, name="test_480"),
 
 ]

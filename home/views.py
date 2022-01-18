@@ -80,6 +80,18 @@ def test_720(request):
         messages.error(request, 'Please enter a valid url or try to reload.')
         return render(request, "download_video.html")
 
+def test_480(request):
+    link = request.GET.get("link")
+
+    try:
+        yt = YouTube(link)
+        return download_480(link)
+
+
+    except Exception as e:
+        messages.error(request, 'Please enter a valid url or try to reload.')
+        return render(request, "download_video.html")
+
 
 def download_720(link):
     number = random.randint(1, 1000)
@@ -91,6 +103,28 @@ def download_720(link):
 
     yt.streams.filter(res="720p", progressive=True).first().download(BASE_DIR)
     os.rename(yt.streams.filter(res="720p", progressive=True).first().default_filename, filename)
+
+    with open(os.path.join(BASE_DIR, filename), 'rb') as f:
+        data = f.read()
+
+    print("Download complete... {}".format(filename))
+
+    response = HttpResponse(data, content_type='video/mp4')
+    response['Content-Disposition'] = f'attachment; {filename}'
+    os.remove(os.path.join(BASE_DIR, filename))
+    return response
+
+
+def download_480(link):
+    number = random.randint(1, 1000)
+
+    BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+    filename = f'video_480_{number}.mp4'
+    yt = YouTube(link)
+
+    yt.streams.filter(res="480p", progressive=True).first().download(BASE_DIR)
+    os.rename(yt.streams.filter(res="480p", progressive=True).first().default_filename, filename)
 
     with open(os.path.join(BASE_DIR, filename), 'rb') as f:
         data = f.read()
