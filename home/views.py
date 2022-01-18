@@ -4,14 +4,11 @@ from django.contrib import messages
 import pytube
 from pytube import YouTube
 import os
-from pathlib import Path
-import mimetypes
 import io
 import random
 
 # Create your views here.
 
-import youtube_dl
 
 
 def index(request):
