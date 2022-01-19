@@ -11,9 +11,6 @@ import random
 
 # Create your views here.
 
-import youtube_dl
-
-
 def index(request):
     return render(request, 'index.html')
 
@@ -120,7 +117,7 @@ def download_480(link):
 
     BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
-    filename = f'video_480_{number}.mp4'
+    filename = f'video_480_{number}.webm'
     yt = YouTube(link)
 
     yt.streams.filter(res="480p", progressive=True).first().download(BASE_DIR)
@@ -131,7 +128,7 @@ def download_480(link):
 
     print("Download complete... {}".format(filename))
 
-    response = HttpResponse(data, content_type='video/mp4')
+    response = HttpResponse(data, content_type='video/webm')
     response['Content-Disposition'] = f'attachment; {filename}'
     os.remove(os.path.join(BASE_DIR, filename))
     return response
