@@ -120,8 +120,8 @@ def download_480(link):
     filename = f'video_480_{number}.mp4'
     yt = YouTube(link)
 
-    yt.streams.filter(res="480p", progressive=True, only_video = True, file_extension = "mp4").first().download(BASE_DIR)
-    os.rename(yt.streams.filter(res="480p", progressive=True, only_video = True, file_extension = "mp4").first().default_filename, filename)
+    yt.streams.filter(progressive=True, file_extension = "mp4").last().download(BASE_DIR)
+    os.rename(yt.streams.filter(progressive=True, file_extension = "mp4").last().default_filename, filename)
 
     with open(os.path.join(BASE_DIR, filename), 'rb') as f:
         data = f.read()
