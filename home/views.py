@@ -9,10 +9,8 @@ import mimetypes
 import io
 import random
 
+
 # Create your views here.
-
-import youtube_dl
-
 
 def index(request):
     return render(request, 'index.html')
@@ -28,6 +26,10 @@ def download_audio(request):
 
 def privacy_policy(request):
     return render(request, 'privacy_policy.html')
+
+
+def tos(request):
+    return render(request, 'tos.html')
 
 
 def contact_us(request):
@@ -80,6 +82,7 @@ def test_720(request):
         messages.error(request, 'Please enter a valid url or try to reload.')
         return render(request, "download_video.html")
 
+
 def test_480(request):
     link = request.GET.get("link")
 
@@ -123,8 +126,8 @@ def download_480(link):
     filename = f'video_480_{number}.mp4'
     yt = YouTube(link)
 
-    yt.streams.filter(res="480p", progressive=True).first().download(BASE_DIR)
-    os.rename(yt.streams.filter(res="480p", progressive=True).first().default_filename, filename)
+    yt.streams.filter(progressive=True, file_extension="mp4").last().download(BASE_DIR)
+    os.rename(yt.streams.filter(progressive=True, file_extension="mp4").last().default_filename, filename)
 
     with open(os.path.join(BASE_DIR, filename), 'rb') as f:
         data = f.read()

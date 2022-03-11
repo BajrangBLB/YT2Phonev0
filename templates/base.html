@@ -1,18 +1,37 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <!-- Required meta tags -->
+    <title>Download YouTube Videos - Yt2phone</title>
+
+
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block head %}{% endblock head %}
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
-    <link rel="icon" href="static/icon.png" type="image/png">
+    <meta name="description" content="YT2phone helps to download YouTube videos in all formats audio, 720p , 360p, 480p and save them in all the devices pc, tablet, IOS."/>
 
-    <title>{% block title %}{% endblock title %}Free Youtube Video Downloader</title>
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Download YouTube Videos - Yt2phone">
+    <meta property="og:description" content="YT2phone helps to download YouTube videos in all formats audio, 720p , 360p, 480p and save them in all the devices pc, tablet, IOS.">
+    <meta property="og:image" content="https://yt2phone.com/static/og-yt2phone.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Download YouTube Videos - Yt2phone">
+    <meta property="twitter:description" content="YT2phone helps to download YouTube videos in all formats audio, 720p , 360p, 480p and save them in all the devices pc, tablet, IOS.">
+    <meta property="twitter:image" content="https://yt2phone.com/static/og-yt2phone.png">
+
+
+    <link rel="apple-touch-icon" sizes="76x76" href="https://yt2phone.com/static/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://yt2phone.com/static/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="https://yt2phone.com/static/favicon-16x16.png">
+<!--    <link rel="mask-icon" href="https://yt2phone.com/static/safari-pinned-tab.svg" color="#ff0068">-->
+    <link rel="shortcut icon" href="https://yt2phone.com/static/favicon.ico">
+
 
     <style>
         .footer {
@@ -84,10 +103,12 @@
 
     </div>
 
-    <form action='download_mp4'>
+    <form method="post">
+        {% csrf_token %}
         <input name='link' class="form-control me-2" type="text" placeholder="Enter YouTube Link Here"
                aria-label="Enter YouTube Link Here">
         <br>
+        <p>By using our service you are accepting our <a href="tos"> terms of service. </a></p>
         <div style="padding:10px; text-align:center">
             {% block btn_download %}{% endblock btn_download %}
         </div>
@@ -120,6 +141,7 @@
     <p class="note mt-4"><span>Note:</span> Downloading of
         copyright content such as official music videos, official movies, and promos are not allowed. </p>
 </div>
+
 
 <footer class="footer">
 

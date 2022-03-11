@@ -24,9 +24,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-^j04txxpl4dz36wy@wkvrvcs%vf1-j)-aj)u#8psvgy!2_!zk)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['yt-phone.herokuapp.com/', '127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'www.yt2phone.com', 'yt2phone.com', '137.184.226.22']
 
 
 # Application definition
@@ -122,9 +122,10 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+
 
 STATIC_URL = '/static/'
+STATIC_ROOT = '/static/'
 
 # Added manually
 STATICFILES_DIRS = [
