@@ -1,0 +1,21 @@
+<style>
+
+  share {
+    
+     //css code to hide the WhatsApp sharing link on the large screen
+    @media screen and (min-width: 1000px) {
+        a {
+            display: none
+        }
+    }
+</style>
+
+<div>
+
+<a href="whatsapp://send?text=Download YouTube videos in both audio and video unlimited. https://www.yt2phone.com " 		data-action="share/whatsapp/share"
+		target="_blank"> Share to WhatsApp </a> 
+
+<a href="https://www.facebook.com/sharer/sharer.php?u=example.org" target="_blank">
+  <img src="facebook.svg" alt="Share on Facebook">
+</a>
+</div>
