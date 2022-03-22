@@ -1,11 +1,131 @@
 {% extends 'base.html' %}
 
 {% block head %}
+<style>
+    h3 {
+        color:#aa336a;
+        }
 
+    .description {
+        color:gray;
+        }
+
+
+
+
+
+</style>
 {% endblock head %}
-{% block body %}
-{% endblock body %}
-{% block btn_download %}
-<button class="btn btn-outline-success" style="width:195px; height:40; margin:20px" formaction="test_mp3">Download Audio</button>
 
-{% endblock btn_download %}
+{% block body %}
+
+<div class="box">
+    <div class="box_convert">
+        <div style="padding:10px; justify-content: center; width:100%;">
+            <h1 style="color:#aa336a; font-size:25px; width:100%; text-align:center">
+                Free YouTube Videos Downloader</h1>
+            <p style="color:gray; font-size:15px; width:100%; text-align:center">
+                Convert and Download YouTube videos in all formats.<br>
+            </p>
+
+        </div>
+
+        <form>
+            {% load static %}
+
+            <div class="download">
+                <input name='link' type="text" placeholder="Enter YouTube link here"
+                       aria-label="Enter YouTube link here">
+
+
+                <p style="color:#696969; font-size:10px; text-align:center; width:100%">By using our service you are
+                    accepting our <a href="tos"> terms of service. </a></p>
+
+                <p style="text-align:center">
+                <button class="btn btn_download" style="width:195px; height:40; margin:20px"
+                        formaction="test_mp3">Download Audio
+                </button>
+                </p>
+            </div>
+        </form>
+
+
+    </div>
+</div>
+
+<div class="box" style="padding:30px; border:none">
+    <div class="row row-padded row-bordered homepage-grid text-center p-l-md p-r-md">
+        <div class="col-xs-12 col-sm-7 text-left" style="text-align:left">
+            <h5><strong>Download YouTube Videos...</strong></h5>
+            <ul style="color:gray; font-size:20px">
+                <li>Go to YouTube and Open the Video that you want to download.</li>
+                <li>Copy the link of the video.</li>
+                <li>Just search on Google "<strong>Yt2Phone</strong>". Click on first result.</li>
+                <li>Paste your link on the given space.</li>
+                <li>Click on your preferred download button.</li>
+            </ul>
+        </div>
+        <div class="col-xs-12 col-sm-5 text-left" style="text-align:left;">
+            <h5><strong>Features of Yt2Phone</strong></h5>
+
+            <ul style="color:gray; font-size:20px;">
+                <li>Unlimited Downloads</li>
+                <li>Download YouTube Videos Free</li>
+                <li>Fast and Secure</li>
+                <li>Mobile Friendly</li>
+                <li>Quality Control</li>
+                <li>No Registration Required</li>
+                <li>Both Audio and Video Formats Supported</li>
+            </ul>
+
+        </div>
+    </div>
+</div>
+
+
+<div class="box" style="border:none; padding:30px">
+    <div class="row row-padded row-bordered homepage-grid text-center p-l-md p-r-md featured">
+        {% load static %}
+        <div class="col-sm-4">
+            <img src="{% static 'free.png' %}" width="100px" height="100px">
+            <h3><strong>Download YouTube Videos Free</strong></h3>
+            <p class="description">
+                Yt2Phone is a YouTube video downloading tool which supports free download.
+                There are no charges to download YouTube videos for free.</p>
+        </div>
+        <div class="col-sm-4">
+            <img src="{% static 'video.png' %}" width="100px" height="100px">
+            <h3><strong>All Formats Supported</strong></h3>
+            <p class="description">Yt2Phone is an online YouTube videos downloading tool which supports both audio and
+                video formats.</p>
+        </div>
+        <div class="col-sm-4">
+            <img src="{% static 'cross-platform.png' %}" width="100px" height="100px">
+            <h3><strong>All Platforms Supported</strong></h3>
+            <p class="description">You can download YouTube Videos by using Yt2Phone in all platforms like Windows,
+                Android, IOS.</p>
+        </div>
+    </div>
+
+    <div class="row row-padded row-bordered homepage-grid text-center p-l-md p-r-md featured">
+        {% load static %}
+        <div class="col-sm-4">
+            <img src="{% static 'fast.png' %}" width="100px" height="100px">
+            <h3><strong>Fast YouTube Videos Download</strong></h3>
+            <p class="description">Yt2Phone provides fast and free YouTube downloads.</p>
+        </div>
+        <div class="col-sm-4">
+            <img src="{% static 'padlock.png' %}" width="100px" height="100px">
+            <h3><strong>Secure YouTube Videos Download</strong></h3>
+            <p class="description">Its 99.9999% secure to download YouTube Videos by Yt2Phone.</p>
+        </div>
+        <div class="col-sm-4">
+            <img src="{% static 'endless.png' %}" width="100px" height="100px">
+            <h3><strong>Unlimited YouTube Videos Download</strong></h3>
+            <p class="description">You can download Unlimited YouTube videos by using Yt2Phone.</p>
+        </div>
+    </div>
+</div>
+
+
+{% endblock body %}

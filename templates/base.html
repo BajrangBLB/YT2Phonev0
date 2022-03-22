@@ -7,83 +7,201 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     {% block head %}{% endblock head %}
-
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
 
-    <meta name="description" content="YT2phone helps to download YouTube videos in all formats audio, 720p , 360p, 480p and save them in all the devices pc, tablet, IOS."/>
+    <meta name="description"
+          content="YT2phone helps to download YouTube videos in all formats audio, 720p , 360p, 480p and save them in all the devices pc, tablet, IOS."/>
 
     <meta property="og:type" content="website">
     <meta property="og:title" content="Download YouTube Videos - Yt2phone">
-    <meta property="og:description" content="YT2phone helps to download YouTube videos in all formats audio, 720p , 360p, 480p and save them in all the devices pc, tablet, IOS.">
+    <meta property="og:description"
+          content="YT2phone helps to download YouTube videos in all formats audio, 720p , 360p, 480p and save them in all the devices pc, tablet, IOS.">
     <meta property="og:image" content="https://yt2phone.com/static/og-yt2phone.png">
 
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:title" content="Download YouTube Videos - Yt2phone">
-    <meta property="twitter:description" content="YT2phone helps to download YouTube videos in all formats audio, 720p , 360p, 480p and save them in all the devices pc, tablet, IOS.">
+    <meta property="twitter:description"
+          content="YT2phone helps to download YouTube videos in all formats audio, 720p , 360p, 480p and save them in all the devices pc, tablet, IOS.">
     <meta property="twitter:image" content="https://yt2phone.com/static/og-yt2phone.png">
 
+
+    <meta http-equiv="refresh" content="5;url=https://yt2phone.com">
 
     <link rel="apple-touch-icon" sizes="76x76" href="https://yt2phone.com/static/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="https://yt2phone.com/static/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="https://yt2phone.com/static/favicon-16x16.png">
-<!--    <link rel="mask-icon" href="https://yt2phone.com/static/safari-pinned-tab.svg" color="#ff0068">-->
+    <!--    <link rel="mask-icon" href="https://yt2phone.com/static/safari-pinned-tab.svg" color="#ff0068">-->
     <link rel="shortcut icon" href="https://yt2phone.com/static/favicon.ico">
 
 
     <style>
+        .col {
+            color: #aa336a;
+            }
+
+        .item_nav {
+            color: #aa336a;
+            font-size: 20px;
+            padding-left: 4px;
+            }
+
+        hr {
+            color: #aa336a;
+            margin: 2px;
+            }
+
+        .footer_text {
+            text-align: center;
+            margin:20px;
+            color: #aa336a;
+            }
+
+        .div_footer {
+            width: auto;
+            margin: auto;
+            margin-top: 25px;
+            height: auto;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            }
+
+
+        .footer_link {
+            font-size: 15px;
+            color: #aa336a;
+            margin-left: 10px;
+            }
+
         .footer {
           position: relative;
-          left: 0;
-          bottom: 0;
-          width: 100%;
-          height: 50px;
+          width:100%;
           padding: 5px;
-          background-color: black;
-          color: white;
-          margin-left:0;
-          margin-right:0;
-          margin-bottom:0;
-          margin-top:50px;
+          margin-left: 0;
+          margin-right: 0;
+          margin-bottom: 0;
+          margin-top: 50px;
         }
+
+        .download {
+            display: block;
+            justify-content: center;
+            align-items: center;
+            }
+
+        input {
+            display: inline-block;
+            width: 100%;
+            margin-bottom: 0px;
+            color: #aa336a;
+            padding: 8px;
+            font-size: 15px;
+            border: #aa336a solid 1px;
+            border-radius: 7px;
+        }
+
+        input::placeholder{
+            color:#ffb6c1;
+        }
+
+        .btn_download {
+          border: #aa336a 2px solid;
+          width:40%;
+          margin-left:30%;
+          margin-right:20%;
+          margin-bottom:20px;
+          color: #aa336a;
+          padding: 5px;
+          background:#fff;
+          border-radius: 10px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 15px;
+          transition-duration: 0.4s;
+          cursor: pointer;
+        }
+
+        .box {
+            border: 1px solid #aa336a;
+            width: 90%;
+            margin: auto;
+            margin-top: 25px;
+            height: auto;
+            display: block;
+            justify-content: center;
+            align-items: center;
+            }
+
+        .box_convert {
+            margin-top: 25px;
+            margin-left: 10%;
+            margin-right: 10%;
+            justify-content: center;
+            align-items: center;
+            display: block;
+            }
+
+
+
+
+
 
 
     </style>
 </head>
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-light bg-transparent  mb-0 pb-0">
     <div class="container-fluid">
-        <a class="navbar-brand" href="/">YT2Phone</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        <a class="navbar-brand ml-0 pl-0 mb-0 pb-0" href="/">
+            <h1 style="color:#AA336A; margin:0; padding:0; font-size:30px">
+                <img src="/static/favicon.ico" alt="" width="50" height="50"
+                     class="d-inline-block align-text-left mr-0 pr-0">
+                Yt2Phone
+            </h1>
+        </a>
+
+        <button class="navbar-toggler border-0 text-white" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
 
                 <li class="nav-item">
-                    <a class="nav-link active" href="download_video">YouTube to mp4</a>
+                    <a class="nav-link active" href="download_video"><span
+                            class="item_nav">YouTube to mp4</span></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="download_audio">YouTube to mp3</a>
+                    <a class="nav-link active" aria-current="page" href="download_audio"><span
+                            class="item_nav">YouTube to mp3</span></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/privacy_policy">Privacy Policy</a>
+                    <a class="nav-link active" aria-current="page" href="/privacy_policy"><span
+                            class="item_nav">Privacy Policy</span></a>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="contact_us">Contact Us</a>
+                    <a class="nav-link active" aria-current="page" href="contact_us"><span
+                            class="item_nav">Contact Us</span></a>
                 </li>
             </ul>
 
         </div>
+
     </div>
+
 </nav>
+<hr>
 {% for message in messages %}
 <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
     <strong>Message: </strong> {{ message }}.
@@ -92,67 +210,37 @@
 {% endfor %}
 {% block body %}{% endblock body %}
 
-<div style="margin-left:20px; margin-top:50px; margin-right:20px">
-    <div style="padding:10px; justify-content: center; width:100%;">
-        <h1 style="color:black; font-size:25px; width:100%; text-align:center">Free YouTube Downloader</h1>
-        <p style="color:gray; font-size:15px; width:100%; text-align:center">
-            Download YouTube Videos in audio and video format.<br>
-            Just paste the youtube video link below and hit the
-            download button, It's absolutely free, fast, and easy.
-        </p>
-
-    </div>
-
-    <form method="post">
-        {% csrf_token %}
-        <input name='link' class="form-control me-2" type="text" placeholder="Enter YouTube Link Here"
-               aria-label="Enter YouTube Link Here">
-        <br>
-        <p>By using our service you are accepting our <a href="tos"> terms of service. </a></p>
-        <div style="padding:10px; text-align:center">
-            {% block btn_download %}{% endblock btn_download %}
-        </div>
-    </form>
-
-
-</div>
-
-<p style="color:gray; font-size:15px; width:100%; text-align:center"><span>YT2Phone</span> is an
-    online tool
-    that can download youtube videos online. Youtube video downloader allows you to save videos locally to
-    your device (iPhone, Android, iPad, tablet). </p>
-<div class="tool-description container mt-5 pt-5" style="margin-top:10px">
-
-    <h2>How to download youtube video?</h2>
-    <h3>Step 1:</h3>
-    <p>Go to youtube and open video that you want to download</p>
-    <h3>Step 2:</h3>
-    <p><span>=&gt; For Youtube Mobile App:</span> Go to an
-        individual video click on the share button showing below the video. After that click on 'Share' and then
-        you'll see a popup in which you will see a lot of options from which choose copy link option </p>
-
-    <p><span>=&gt; For Youtube Desktop Website:</span> Go to an
-        individual video and just copy the URL of the video. Or you can also
-        get a URL by clicking on the share button. </p>
-    <h3>Step 3:</h3>
-    <p>Paste the URL you just copied, in the above input text box, and click on the
-        download button, after that you will see a table containing information about that video. From that
-        table, you can select the quality of a video in which you want to download that. </p>
-    <p class="note mt-4"><span>Note:</span> Downloading of
-        copyright content such as official music videos, official movies, and promos are not allowed. </p>
-</div>
-
-
-<footer class="footer">
-
-    <p>
-        <span style="display:block; text-align:center; margin:10px;">Copyright © 2022 YT2Phone.com</span></p>
-</footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
 
+
+<footer class="footer">
+    <hr>
+
+    <div class="div_footer">
+        <p style="text-align:center">
+            <a class="footer_link" href="/">Home</a>
+            <a class="footer_link" href="disclaimer">Disclaimer</a>
+            <a class="footer_link" href="privacy_policy">Privacy Policy</a>
+            <a class="footer_link" href="tos">Terms of Service</a>
+            <a class="footer_link" href="contact_us">Contact Us</a>
+
+        <p class="footer_text" style="color:gray">
+            {% load static %}
+            Made with <img src="{% static 'heart.png' %}" width="20px" height="20px"> by <strong>BLB</strong>.
+        </p>
+
+
+        <p class="footer_text">
+            Copyright © 2022 YT2Phone.com
+        </p>
+
+
+    </div>
+
+</footer>
 
 </body>
 </html>

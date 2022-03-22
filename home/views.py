@@ -4,9 +4,6 @@ from django.contrib import messages
 import pytube
 from pytube import YouTube
 import os
-from pathlib import Path
-import mimetypes
-import io
 import random
 
 
@@ -30,6 +27,10 @@ def privacy_policy(request):
 
 def tos(request):
     return render(request, 'tos.html')
+
+
+def disclaimer(request):
+    return render(request, 'disclaimer.html')
 
 
 def contact_us(request):
